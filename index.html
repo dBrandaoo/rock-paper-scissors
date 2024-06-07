@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="scoreBoard">PLAYER - 0 | 0 - CPU</div>
+    <div class="gameWrapper">
+        <div id="banner">WELCOME TO ROCK-PAPER-SCISSORS</div>
+        <div class="handWrapper">
+            <div class="hand">
+                <img src="images/player/playerRock.png" alt="" id="playerHand">
+            </div>
+            <div id="textArea"></div>
+            <div class="hand">
+                <img src="images/enemy/cpuRock.png" alt="" id="enemyHand">
+            </div>
+        </div>
+        <div class="buttonWrapper">
+            <div class="choiceButtons">
+                <button class="choice" id="rockBtn" onclick="defChoice('rock', 'rockBtn')"><img src="images/buttons/rps_rock.png" alt=""></button>
+                <button class="choice" id="paperBtn" onclick="defChoice('paper', 'paperBtn')"><img src="images/buttons/rps_paper.png" alt=""></button>
+                <button class="choice" id="scissorsBtn" onclick="defChoice('scissors', 'scissorsBtn')"><img src="images/buttons/rps_scissors.png" alt=""></button>
+            </div>
+            <button id="fightButton" onclick="game()"><img src="images/buttons/FIGHT.png" alt=""></button>
+        </div>
+    </div>
+</body>
+</html>

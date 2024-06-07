@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,300;0,500;0,900;1,300;1,500;1,900&display=swap');
+
+/* VARIABLES */
+:root {
+    --animation-duration: 0.25s;
+    --animation-iteration-count: 8;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    font-family: "Roboto Mono", monospace;
+}
+
+#scoreBoard {
+    font-size: 2em;
+}
+
+.gameWrapper {
+    height: 70%;
+    width: 70%;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner {
+    margin: 1em auto 0 auto;
+    font-size: 2em;
+}
+
+#textArea {
+    min-width: 240px;
+    text-align: center;
+    font-size: 3em;
+}
+
+.handWrapper {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 90%;
+    height: 60%;
+    margin: 2em auto;
+}
+
+.hand {
+    height: 90%;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.hand > img {
+    margin: 1.7em;
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choice, #fightButton {
+    height: 7em;
+    width: 7em;
+    border: 1px solid black;
+    border-radius: .3em;
+}
+
+.choiceButtons {
+    margin-left: 9.2em;
+}
+
+img {
+    width: 85%;
+    height: auto;
+}
+
+#fightButton {
+    margin-right: 17em;
+}
+
+#playerHand, #enemyHand {
+    position: relative;
+    
+}
+
+.playerAnimation {
+    animation-name: playerHandMovement;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: var(--animation-iteration-count);
+    animation-direction: alternate;
+}
+
+.enemyAnimation {
+    animation-name: enemyHandMovement;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: var(--animation-iteration-count);
+    animation-direction: alternate;
+}
+
+/* ANIMATIONS */
+@keyframes playerHandMovement {
+    from {
+        top: 0px; 
+        transform: rotate(0deg);
+    }
+    to {
+        top: -65px; 
+        transform: rotate(-25deg);
+    }
+}
+@keyframes enemyHandMovement {
+    from {
+        top: 0px; 
+        transform: rotate(0deg);
+    }
+    to {
+        top: -65px; 
+        transform: rotate(25deg);
+    }
+}
